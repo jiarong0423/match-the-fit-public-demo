@@ -24,3 +24,310 @@ button {
 main {
   min-height: 100vh;
 }
+
+.fitstyle-main {
+  min-height: 100vh;
+  background: #f7f5f0;
+  color: #172033;
+  padding: 32px 24px;
+}
+
+.fitstyle-shell {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.fitstyle-sidebar,
+.fitstyle-panel,
+.fitstyle-wide-card,
+.fitstyle-metric {
+  border: 1px solid #d8cdbd;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.fitstyle-sidebar,
+.fitstyle-panel,
+.fitstyle-wide-card,
+.fitstyle-metric {
+  padding: 20px;
+}
+
+.fitstyle-eyebrow {
+  margin: 0;
+  color: #6f6256;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.fitstyle-title {
+  margin: 10px 0 0;
+  font-size: 32px;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.fitstyle-copy,
+.fitstyle-panel-copy,
+.fitstyle-note,
+.fitstyle-funnel-copy,
+.fitstyle-youcam-text,
+.fitstyle-youcam-note {
+  color: #657080;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.fitstyle-copy {
+  margin: 16px 0 0;
+}
+
+.fitstyle-case-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.fitstyle-case-button {
+  width: 100%;
+  border: 1px solid #d8cdbd;
+  border-radius: 6px;
+  background: #fbfaf7;
+  color: #625847;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.fitstyle-case-button:hover,
+.fitstyle-case-button-active {
+  border-color: #315f8c;
+  background: #eef7fb;
+  color: #315f8c;
+}
+
+.fitstyle-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fitstyle-outfit-title {
+  max-width: 760px;
+  margin: 10px 0 0;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.fitstyle-panel-copy {
+  max-width: 760px;
+  margin: 10px 0 0;
+}
+
+.fitstyle-primary-button {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 6px;
+  background: #315f8c;
+  color: #ffffff;
+  padding: 13px 18px;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.fitstyle-primary-button:hover {
+  background: #244c70;
+}
+
+.fitstyle-primary-button:disabled {
+  cursor: progress;
+  opacity: 0.72;
+}
+
+.fitstyle-error {
+  margin: 20px 0 0;
+  border: 1px solid #e7bba8;
+  border-radius: 6px;
+  background: #fff1eb;
+  color: #a3482f;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.fitstyle-result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.fitstyle-metric-pass {
+  border-color: #bddbc8;
+  background: #eef8f1;
+  color: #2f6b4c;
+}
+
+.fitstyle-metric-info {
+  border-color: #c7d8e5;
+  background: #eef7fb;
+  color: #315f8c;
+}
+
+.fitstyle-metric-neutral {
+  background: #fbfaf7;
+  color: #625847;
+}
+
+.fitstyle-metric-label,
+.fitstyle-card-title,
+.fitstyle-youcam-label {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fitstyle-metric-value {
+  margin-top: 10px;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.fitstyle-reason-list {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #384252;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.fitstyle-wide-card {
+  grid-column: 1 / -1;
+}
+
+.fitstyle-card-title {
+  color: #625847;
+}
+
+.fitstyle-funnel-grid,
+.fitstyle-youcam-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.fitstyle-funnel-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fitstyle-funnel-step {
+  border: 1px solid #e4dacc;
+  border-radius: 6px;
+  background: #fbfaf7;
+  padding: 12px;
+}
+
+.fitstyle-funnel-title {
+  color: #172033;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.fitstyle-funnel-copy {
+  margin-top: 4px;
+}
+
+.fitstyle-note,
+.fitstyle-youcam-note {
+  margin: 16px 0 0;
+}
+
+.fitstyle-youcam-card {
+  border-color: #c7d8e5;
+  background: #eef7fb;
+}
+
+.fitstyle-youcam-title {
+  color: #315f8c;
+}
+
+.fitstyle-youcam-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fitstyle-youcam-item {
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 12px;
+}
+
+.fitstyle-youcam-label {
+  color: #657080;
+}
+
+.fitstyle-youcam-value {
+  margin-top: 4px;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.fitstyle-youcam-text {
+  margin-top: 4px;
+  color: #172033;
+}
+
+.fitstyle-youcam-note {
+  color: #315f8c;
+}
+
+@media (max-width: 900px) {
+  .fitstyle-shell,
+  .fitstyle-result-grid,
+  .fitstyle-funnel-grid,
+  .fitstyle-youcam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fitstyle-panel-header {
+    display: grid;
+  }
+
+  .fitstyle-primary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .fitstyle-main {
+    padding: 18px 14px;
+  }
+
+  .fitstyle-title {
+    font-size: 28px;
+  }
+
+  .fitstyle-outfit-title {
+    font-size: 22px;
+  }
+}
