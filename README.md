@@ -12,6 +12,20 @@ try-on proof.
 Match the fit before generating the look.
 ```
 
+## Judge Quick Start
+
+If you are reviewing this project, start here:
+
+1. Run the app locally with the setup commands below.
+2. Open the product UI and run the pre-VTO gate on the three sample models.
+3. Read `lib/publicDecisionEngine.ts` to inspect the decision logic.
+4. Read `docs/architecture.md` for the system flow.
+5. Read `docs/judge-review.md` for the YouCam API hackathon scoring angle.
+
+Recommended category: **Fashion / Apparel VTO**. FitStyle Map is a consumer and
+retail decision app that uses the YouCam fashion try-on layer as the final proof
+after a pre-VTO fit decision.
+
 ## Product Concept
 
 FitStyle Map helps retailers and shoppers answer one practical question:
@@ -43,24 +57,29 @@ This repository contains a runnable public version of the product flow:
   fit signals.
 - `lib/publicContracts.ts`: typed request and response contract.
 - `docs/architecture.md`: architecture diagrams and runtime flow.
+- `docs/judge-review.md`: judge-facing checklist mapped to the official
+  criteria.
 - `docs/submission-alignment.md`: judging checklist and demo-video outline.
+- `docs/youcam-api.md`: YouCam Fashion / Apparel VTO usage explanation.
 - `docs/review-scope.md`: how to use the public repo and live staging app
   together.
 
 ## Official Submission Alignment
 
-The repository is structured for a Build Week style judging flow:
+The repository is structured for the YouCam API Skin AI & Apparel VTO Hackathon:
 
 - Working project: runnable Next.js app.
-- Category fit: consumer lifestyle / shopping decision support.
+- YouCam API category: Fashion / Apparel VTO.
 - Project description: product concept, problem, solution, and flow are covered
   in this README.
-- Demo video: the app can be shown as the reviewable code surface while the live
-  staging app demonstrates the complete end-to-end workflow.
+- Demo video: the live staging app should be shown end-to-end in a 1-3 minute
+  public video, including how YouCam API is used.
+- Screenshots: include the product UI, decision result, and YouCam proof flow in
+  the Devpost submission.
 - Code repository: source is public, typed, and small enough to inspect quickly.
 - Setup guidance: install and run steps are below.
-- Codex / GPT-5.6 usage: architecture, release scoping, UI flow, and
-  review-ready packaging were built iteratively with Codex and GPT-5.6.
+- Official judging criteria: `docs/judge-review.md` maps the project to
+  technological implementation, design, potential impact, and idea quality.
 
 ## Architecture
 
@@ -102,6 +121,7 @@ quota.
 4. Open the decision funnel panel to see how the product thinks.
 5. Compare the code path with `lib/publicDecisionEngine.ts` and
    `docs/architecture.md`.
+6. Use `docs/judge-review.md` as the final review checklist.
 
 ## MVP Scope
 
@@ -110,13 +130,13 @@ The MVP demonstrates the core product behavior:
 - model-aware outfit selection
 - positive and negative styling comparison
 - pre-VTO decision logic
-- cost-aware provider dispatch concept
+- cost-aware YouCam API dispatch concept
 - readable reasons for judges, shoppers, and merchants
 - architecture documentation that explains how the UI, API, decision engine, and
-  visual proof layer fit together
+  YouCam proof layer fit together
 
 The full staging experience adds the complete 30-outfit matrix, visual QA
-boards, source calibration controls, and live provider dispatch.
+boards, source calibration controls, and live YouCam dispatch.
 
 ## Safety And Use
 

@@ -152,6 +152,40 @@ export default function FitStylePublicDemo() {
                   {decision.decisionNote}
                 </p>
               </div>
+              <div className="rounded-lg border border-[#c7d8e5] bg-[#eef7fb] p-4 md:col-span-3">
+                <div className="text-xs font-black uppercase text-[#315f8c]">
+                  YouCam API Usage
+                </div>
+                <div className="mt-3 grid gap-2 md:grid-cols-3">
+                  <div className="rounded-md bg-white p-3">
+                    <div className="text-xs font-black uppercase text-[#657080]">
+                      API Category
+                    </div>
+                    <div className="mt-1 text-sm font-black text-[#172033]">
+                      {decision.youCamApi.category}
+                    </div>
+                  </div>
+                  <div className="rounded-md bg-white p-3">
+                    <div className="text-xs font-black uppercase text-[#657080]">
+                      Product Role
+                    </div>
+                    <div className="mt-1 text-sm leading-6 text-[#172033]">
+                      {decision.youCamApi.role}
+                    </div>
+                  </div>
+                  <div className="rounded-md bg-white p-3">
+                    <div className="text-xs font-black uppercase text-[#657080]">
+                      Send Policy
+                    </div>
+                    <div className="mt-1 text-sm leading-6 text-[#172033]">
+                      {decision.youCamApi.sendPolicy}
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-6 text-[#315f8c]">
+                  {decision.youCamApi.proofLayer}
+                </p>
+              </div>
             </div>
           ) : null}
         </section>

@@ -18,5 +18,11 @@ export type PublicPreVtoDecision = {
     label: string;
     purpose: string;
   }[];
+  youCamApi: {
+    category: "Fashion / Apparel VTO";
+    role: string;
+    proofLayer: string;
+    sendPolicy: string;
+  };
   decisionNote: string;
 };

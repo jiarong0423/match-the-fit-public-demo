@@ -10,15 +10,15 @@ video support.
 
 ## Live Staging Surface
 
-The live staging app demonstrates the complete experience: source models,
-outfit matrix, visual comparison, send counters, confirmation prompts, and
-provider proof flow.
+The live staging app demonstrates the complete YouCam API experience: source
+models, outfit matrix, visual comparison, send counters, confirmation prompts,
+and Fashion / Apparel VTO proof flow.
 
 ## Engineering Boundary
 
-The source model calibration service, provider integration, and QA evidence
-pipeline are runtime services. They support the product but do not need to be
-embedded in the public review shell for judges to understand the architecture.
+The source model calibration service, YouCam dispatch controls, and QA evidence
+pipeline are runtime services. They support the product flow shown in this repo
+and are demonstrated through the live staging URL.
 
 ## Review Recommendation
 

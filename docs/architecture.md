@@ -16,7 +16,7 @@ flowchart TB
   F -->|PASS| G["Recommended try-on candidate"]
   F -->|REVIEW| H["Comparison or human review candidate"]
   F -->|HOLD| I["Revise styling or keep as negative control"]
-  G --> J["Visual proof layer"]
+  G --> J["YouCam Fashion / Apparel VTO proof layer"]
   H --> J
   J --> K["Shopper-facing try-on result"]
   K --> L["Review feedback for future styling rules"]
@@ -42,7 +42,7 @@ flowchart LR
 | Outfit template | Does the silhouette improve proportion before VTO? |
 | Material and construction | Will the fabric behavior support the silhouette? |
 | Garment readiness | Is the candidate ready enough to spend provider units? |
-| VTO proof | Does the generated image confirm the decision for shoppers? |
+| YouCam VTO proof | Does the generated image confirm the decision for shoppers? |
 
 ## Runtime Flow
 
@@ -52,7 +52,7 @@ sequenceDiagram
   participant UI as FitStyle UI
   participant API as Pre-VTO API
   participant Engine as Decision Engine
-  participant Proof as Visual Proof Layer
+  participant Proof as YouCam VTO Proof Layer
 
   Judge->>UI: Select source model and outfit reference
   UI->>API: POST sourceModelId and referenceId
@@ -60,7 +60,7 @@ sequenceDiagram
   Engine-->>API: PASS / REVIEW / HOLD with reasons
   API-->>UI: Return typed public contract
   UI-->>Judge: Show confidence, reasons, and funnel layers
-  UI->>Proof: Full staging can send approved candidates to visual proof
+  UI->>Proof: Full staging sends approved candidates to YouCam Fashion / Apparel VTO
 ```
 
 ## Code Map
@@ -73,9 +73,9 @@ sequenceDiagram
 | `lib/publicSampleCases.ts` | Sample product cases and fit signals |
 | `lib/publicContracts.ts` | Typed API contract |
 
-## Cost-Control Concept
+## YouCam API Cost-Control Concept
 
-FitStyle Map treats visual try-on as the final proof layer, not the first
-screening step. The product can show send counters and confirmation prompts so
-reviewers know generation cost is being managed while still allowing hands-on
-testing.
+FitStyle Map treats YouCam Fashion / Apparel VTO as the final proof layer, not
+the first screening step. The product can show send counters and confirmation
+prompts so reviewers know generation cost is being managed while still allowing
+hands-on testing.

@@ -53,7 +53,15 @@ export function runPublicPreVtoDecision(
       label: layer.label,
       purpose: layer.purpose,
     })),
+    youCamApi: {
+      category: "Fashion / Apparel VTO",
+      role: "Creates the final visual try-on proof after FitStyle ranks the outfit candidate.",
+      proofLayer:
+        "The live staging flow sends approved source/outfit pairs to YouCam after explicit confirmation.",
+      sendPolicy:
+        "FitStyle shows send counts and confirmation prompts before consuming YouCam API units.",
+    },
     decisionNote:
-      "The decision layer keeps the product review focused on fit signals, outfit readiness, and whether the look should move into visual proof.",
+      "The decision layer keeps the product review focused on fit signals, outfit readiness, and whether the look should move into YouCam visual proof.",
   };
 }
