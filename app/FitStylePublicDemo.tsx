@@ -2,30 +2,13 @@
 
 import { useState } from "react";
 import type { PublicPreVtoDecision } from "../lib/publicContracts";
-
-const demoCases = [
-  {
-    id: "source-f-petite-flat-front-156",
-    label: "F / Lina",
-    outfit: "透膚層次上衣 + 高腰 A 字長裙",
-  },
-  {
-    id: "source-d-tall-slim-office-177",
-    label: "D / Irina",
-    outfit: "高領短針織 + 高腰窄裙",
-  },
-  {
-    id: "source-c-black-editorial-174",
-    label: "C / Noa",
-    outfit: "米白垂墜短袖上衣 + 摩卡高腰寬褲",
-  },
-];
+import { publicDemoCases } from "../lib/publicSampleCases";
 
 export default function FitStylePublicDemo() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [decision, setDecision] = useState<PublicPreVtoDecision | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
-  const activeCase = demoCases[activeIndex];
+  const activeCase = publicDemoCases[activeIndex];
 
   async function runDecision() {
     setStatus("loading");
@@ -66,12 +49,11 @@ export default function FitStylePublicDemo() {
             Match the fit before generating the look.
           </h1>
           <p className="mt-4 text-sm leading-6 text-[#657080]">
-            Public code only shows the product flow. Body Fit ID decoding,
-            scoring weights, calibration, and YouCam task data stay behind the
-            protected backend.
+            FitStyle Map checks whether an outfit is worth sending to visual
+            try-on before spending generation cost.
           </p>
           <div className="mt-5 grid gap-2">
-            {demoCases.map((item, index) => (
+            {publicDemoCases.map((item, index) => (
               <button
                 className={`rounded-md border px-3 py-3 text-left text-sm font-black transition ${
                   activeIndex === index
@@ -100,9 +82,7 @@ export default function FitStylePublicDemo() {
               </p>
               <h2 className="mt-2 text-2xl font-black">{activeCase.outfit}</h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-[#657080]">
-                The frontend sends only source and reference identifiers. The
-                backend returns a bounded decision without exposing raw vectors
-                or formulas.
+                {activeCase.concept}
               </p>
             </div>
             <button
@@ -148,6 +128,29 @@ export default function FitStylePublicDemo() {
                     <li key={reason}>{reason}</li>
                   ))}
                 </ul>
+              </div>
+              <div className="rounded-lg border border-[#d8cdbd] bg-white p-4 md:col-span-3">
+                <div className="text-xs font-black uppercase text-[#625847]">
+                  Decision Funnel
+                </div>
+                <div className="mt-3 grid gap-2 md:grid-cols-2">
+                  {decision.funnelLayers.map((layer) => (
+                    <div
+                      className="rounded-md border border-[#e4dacc] bg-[#fbfaf7] p-3"
+                      key={layer.label}
+                    >
+                      <div className="text-sm font-black text-[#172033]">
+                        {layer.label}
+                      </div>
+                      <div className="mt-1 text-sm leading-6 text-[#657080]">
+                        {layer.purpose}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm leading-6 text-[#657080]">
+                  {decision.decisionNote}
+                </p>
               </div>
             </div>
           ) : null}

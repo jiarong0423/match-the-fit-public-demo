@@ -9,6 +9,14 @@ export type PublicPreVtoDecision = {
   referenceId: string;
   verdict: "PASS" | "REVIEW" | "HOLD";
   confidence: number;
+  modelName: string;
+  scenario: string;
+  outfit: string;
+  concept: string;
   publicReasons: string[];
-  protectedNotice: string;
+  funnelLayers: {
+    label: string;
+    purpose: string;
+  }[];
+  decisionNote: string;
 };
